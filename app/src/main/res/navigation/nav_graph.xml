@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/anasayfaFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.muka.navigationodevi.AnasayfaFragment"
+        android:label="Anasayfa"
+        tools:layout="@layout/fragment_anasayfa">
+        <action android:id="@+id/AyaGecis" app:destination="@id/AFragment" />
+        <action android:id="@+id/XeGecis" app:destination="@id/XFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/AFragment"
+        android:name="com.muka.navigationodevi.AFragment"
+        android:label="A"
+        tools:layout="@layout/fragment_a">
+        <action android:id="@+id/AdanByeGecis" app:destination="@id/BFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/BFragment"
+        android:name="com.muka.navigationodevi.BFragment"
+        android:label="B"
+        tools:layout="@layout/fragment_b">
+        <action android:id="@+id/BdenYyeGecis" app:destination="@id/YFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/XFragment"
+        android:name="com.muka.navigationodevi.XFragment"
+        android:label="X"
+        tools:layout="@layout/fragment_x">
+        <action android:id="@+id/XdenYyeGecis" app:destination="@id/YFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/YFragment"
+        android:name="com.muka.navigationodevi.YFragment"
+        android:label="Y"
+        tools:layout="@layout/fragment_y">
+        <action
+            android:id="@+id/YdenAnasayfayaGecis"
+            app:destination="@id/anasayfaFragment" />
+    </fragment>
+
+</navigation>
